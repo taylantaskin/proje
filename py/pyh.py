@@ -83,8 +83,6 @@ print("-    -    -    -    -    -")
 print("-        !RESULT!        -")
 print("-    -    -    -    -    -")
 
-
-
 print("Your answers are: ", end=" ")
 for choice in choices:
     print(choice, end=" ")
