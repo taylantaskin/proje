@@ -115,14 +115,11 @@ Feel free to fork this repository and submit pull requests. You can also:
 4. Add additional features
 ```
 
-## License
-```
-This project is open source and available under the MIT License.
-```
-
 ## Author
 ```
-[Your Name]
+Taylan Taşkın
+Amar Nezirevic
+Harun Bandic
 ```
 
 ## Acknowledgments
@@ -150,6 +147,6 @@ project-root/
 
 ## Contact
 ```
-GitHub: [Your GitHub Username]
-Email: [Your Email]
+GitHub: [taylantaskin]
+Email: [220302443@student.ius.edu.ba]
 ```
