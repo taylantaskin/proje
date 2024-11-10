@@ -57,7 +57,7 @@ The quiz covers various geographical topics including:
 # Uses tuples for static data
 questions = (...)
 options = (...)
-correct_answers = (...)
+correct_options = (...)
 
 # Run with
 python quiz.py
