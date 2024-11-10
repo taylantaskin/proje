@@ -46,7 +46,7 @@ The quiz covers various geographical topics including:
 ## Scoring System
 ```
 - Passing requires at least 5 correct answers
-- Excellence award for 9 or more correct answers
+- Excellence award for 10 correct answers
 - Below 5 correct answers is considered a fail
 ```
 
