@@ -142,8 +142,8 @@ project-root/
 │   └── c#/
 │       └── Quiz.cs
 │
-├── README.md
-└── LICENSE
+├── LICENSE
+└── README.md
 ```
 
 ## Contact
