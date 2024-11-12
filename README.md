@@ -60,7 +60,7 @@ options = (...)
 correct_options = (...)
 
 # Run with
-python quiz.py or online compiler https://www.programiz.com/python-programming/online-compiler/
+python quiz.py
 ```
 
 ### JavaScript Version
@@ -72,7 +72,7 @@ const correctAnswers = [...]
 
 // Run with
 First install node https://nodejs.org/dist/v22.11.0/node-v22.11.0-x86.msi
-Than use "node quiz.js" in terminal 
+Than use "node quiz.js" in terminal
 ```
 
 ### C# Version
@@ -91,8 +91,8 @@ dotnet run Quiz.cs
 ### Prerequisites
 ```
 - Python 3.x for Python version or https://www.programiz.com/python-programming/online-compiler/ (Online Compiler Python)
-- Node.js for JavaScript version
-- .NET Framework/Core for C# version
+- Node.js for JavaScript version or https://www.programiz.com/javascript/online-compiler/ (Online Compiler JavaScript)
+- .NET Framework/Core for C# version or https://www.programiz.com/csharp-programming/online-compiler/ (Online Compiler C#)
 ```
 
 ### Running the Applications
@@ -135,7 +135,7 @@ Harun Bandic
 project-root/
 │
 ├── src/
-│   ├── python/
+│   ├── Python/
 │   │   └── quiz.py
 │   ├── javascript/
 │   │   └── quiz.js
