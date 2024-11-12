@@ -71,7 +71,8 @@ const options = [...]
 const correctAnswers = [...]
 
 // Run with
-node quiz.js
+First install node https://nodejs.org/dist/v22.11.0/node-v22.11.0-x86.msi
+Than use "node quiz.js" in terminal 
 ```
 
 ### C# Version
