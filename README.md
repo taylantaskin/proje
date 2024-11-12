@@ -60,7 +60,7 @@ options = (...)
 correct_options = (...)
 
 # Run with
-python quiz.py
+python quiz.py or online compiler https://www.programiz.com/python-programming/online-compiler/
 ```
 
 ### JavaScript Version
@@ -90,7 +90,7 @@ dotnet run Quiz.cs
 
 ### Prerequisites
 ```
-- Python 3.x for Python version
+- Python 3.x for Python version or https://www.programiz.com/python-programming/online-compiler/ (Online Compiler Python)
 - Node.js for JavaScript version
 - .NET Framework/Core for C# version
 ```
