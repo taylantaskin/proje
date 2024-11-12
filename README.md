@@ -139,7 +139,7 @@ project-root/
 │   │   └── quiz.py
 │   ├── javascript/
 │   │   └── quiz.js
-│   └── csharp/
+│   └── c#/
 │       └── Quiz.cs
 │
 ├── README.md
