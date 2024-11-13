@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class Program
+class Quiz
 {
     static readonly string[] questions = {
         "1. Which country is known as the Land of the Rising Sun? ",
