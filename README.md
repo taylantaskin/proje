@@ -164,9 +164,9 @@ dotnet run Quiz.cs
 
 ### Prerequisites
 ```
-- Python 3.x for Python version or https://www.programiz.com/python-programming/online-compiler/ (Online Compiler Python)
-- Node.js for JavaScript version or https://www.programiz.com/javascript/online-compiler/ (Online Compiler JavaScript)
-- .NET Framework/Core for C# version or https://www.programiz.com/csharp-programming/online-compiler/ (Online Compiler C#)
+- Python 3.x for Python version
+- Node.js for JavaScript version
+- .NET Framework/Core for C# version
 ```
 
 ### Running the Applications
