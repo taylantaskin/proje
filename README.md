@@ -206,18 +206,20 @@ Harun Bandic
 
 ## Project Structure
 ```
-project-root/
+proje/
 │
-├── src/
-│   ├── Python/
-│   │   └── quiz.py
-│   ├── javascript/
-│   │   └── quiz.js
-│   └── c#/
-│       └── Quiz.cs
+├── csharp/
+│   └── Quiz.cs
+│
+├── javascript/
+│   └── quiz.js
+│
+├── python/
+│   └── quiz.py
 │
 ├── LICENSE
 └── README.md
+
 ```
 
 ## Contact
