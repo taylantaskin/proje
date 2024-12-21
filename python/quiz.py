@@ -60,6 +60,7 @@ score = 0
 passed = 0
 failed = 0
 
+# Quiz Loop
 for question in questions:
     print(question)
     for option in options[question_index]:
@@ -69,33 +70,45 @@ for question in questions:
     if choice == correct_options[question_index]:
         print(f"{choice} is correct!")
         print(detailed_answers[question_index])
-        score += 1
+        score += 1  # Only increase score for correct answers
         passed += 1
     else:
         print(f"{choice} is incorrect!")
         print(detailed_answers[question_index])
-        score -= 1
         failed += 1
 
     question_index += 1
     print()
+
+# Final result and total score printout
 print("-    -    -    -    -    -")
 print("-        !RESULT!        -")
 print("-    -    -    -    -    -")
 
+# Print answers
 print("Your answers are: ", end=" ")
 for choice in choices:
     print(choice, end=" ")
 print()
+
+# Print correct answers
 print("The correct answers are: ", end=" ")
 for correct_option in correct_options:
     print(correct_option, end=" ")
 print()
-print(f"You answered {passed} questions correctly！")
+
+# Print passed and failed counts
+print(f"You answered {passed} questions correctly!")
 print(f"You failed {failed} questions")
+
+# Evaluation based on the number of correct answers
 if passed < 5:
     print("Failed! Repeat the quiz.")
 elif passed < 9:
     print("You Passed!")
 else:
     print("Excellent! Keep it up.")
+
+# Print total score after evaluation
+print(f"Total Score: {score}/{len(questions)}")
+
