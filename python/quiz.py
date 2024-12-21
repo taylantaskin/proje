@@ -99,3 +99,5 @@ elif passed < 9:
     print("You Passed!")
 else:
     print("Excellent! Keep it up.")
+
+print(f"Your total score is: {passed}/{len(questions)}")
