@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 class Quiz
 {
-    static readonly string[] questions = {
+    static string[] questions = {
         "1. Which country is known as the Land of the Rising Sun? ",
         "2. Which country has the city of Paris as its capital?",
         "3. Which country is home to the Amazon Rainforest?",
@@ -16,7 +16,7 @@ class Quiz
         "10. Which country has the most populous city, Tokyo?"
     };
 
-    static readonly string[][] options = {
+    static string[][] options = {
         new[] { "A. South Korea", "B. China", "C. Japan", "D. Vietnam" },
         new[] { "A. Italy", "B. Spain", "C. France", "D. Belgium" },
         new[] { "A. Argentina", "B. Peru", "C. Brazil", "D. Colombia" },
@@ -29,9 +29,9 @@ class Quiz
         new[] { "A. South Korea", "B. India", "C. Japan", "D. China" }
     };
 
-    static readonly string[] correctOptions = { "C", "C", "C", "C", "B", "C", "B", "C", "B", "C" };
+    static string[] correctOptions = { "C", "C", "C", "C", "B", "C", "B", "C", "B", "C" };
 
-    static readonly string[] detailedAnswers = {
+    static string[] detailedAnswers = {
         "Japan is often referred to as the \"Land of the Rising Sun\". \nIn ancient times, the Japanese believed they were the first to see the sun rise in the East.",
         "Paris, known as \"The City of Light,\" is the capital and largest city of France. \nFamous for its art, culture, and landmarks like the Eiffel Tower.",
         "The majority of the Amazon Rainforest, about 60%, is located in Brazil. \nIt is the world's largest tropical rainforest and plays a crucial role in regulating the global climate.",
@@ -51,37 +51,70 @@ class Quiz
         int passed = 0;
         int failed = 0;
 
+        StartQuiz(choices, ref score, ref passed, ref failed);
+
+        DisplayResults(choices, passed, failed, score);
+    }
+
+    static void StartQuiz(List<string> choices, ref int score, ref int passed, ref int failed)
+    {
         for (int questionIndex = 0; questionIndex < questions.Length; questionIndex++)
         {
-            Console.WriteLine(questions[questionIndex]);
-            
-            foreach (string option in options[questionIndex])
-            {
-                Console.WriteLine(option);
-            }
+            AskQuestion(questionIndex, choices);
 
-            Console.Write("Enter A, B, C, or D: ");
-            string choice = Console.ReadLine()?.Trim().ToUpper() ?? "";
+            string choice = GetAnswer();
             choices.Add(choice);
 
-            if (choice == correctOptions[questionIndex])
+            if (IsAnswerCorrect(questionIndex, choice))
             {
-                Console.WriteLine($"{choice} is correct!");
-                Console.WriteLine(detailedAnswers[questionIndex]);
-                score++;
-                passed++;
+                CorrectAnswer(questionIndex, ref score, ref passed);
             }
             else
             {
-                Console.WriteLine($"{choice} is incorrect!");
-                Console.WriteLine(detailedAnswers[questionIndex]);
-                score--;
-                failed++;
+                IncorrectAnswer(questionIndex, ref score, ref failed);
             }
-
-            Console.WriteLine();
         }
+    }
 
+    static void AskQuestion(int questionIndex, List<string> choices)
+    {
+        Console.WriteLine(questions[questionIndex]);
+
+        foreach (string option in options[questionIndex])
+        {
+            Console.WriteLine(option);
+        }
+    }
+
+    static string GetAnswer()
+    {
+        Console.Write("Enter A, B, C, or D: ");
+        return Console.ReadLine()?.Trim().ToUpper() ?? "";
+    }
+
+    static bool IsAnswerCorrect(int questionIndex, string choice)
+    {
+        return choice == correctOptions[questionIndex];
+    }
+
+    static void CorrectAnswer(int questionIndex, ref int score, ref int passed)
+    {
+        Console.WriteLine("Correct!");
+        Console.WriteLine(detailedAnswers[questionIndex]);
+        score++;
+        passed++;
+    }
+
+    static void IncorrectAnswer(int questionIndex, ref int score, ref int failed)
+    {
+        Console.WriteLine("Incorrect!");
+        Console.WriteLine(detailedAnswers[questionIndex]);
+        score--;
+        failed++;
+    }
+
+    static void DisplayResults(List<string> choices, int passed, int failed, int score)
+    {
         Console.WriteLine("-    -    -    -    -    -");
         Console.WriteLine("-        !RESULT!        -");
         Console.WriteLine("-    -    -    -    -    -");
