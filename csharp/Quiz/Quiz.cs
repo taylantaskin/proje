@@ -94,6 +94,7 @@ class Quiz
 
         Console.WriteLine($"You answered {passed} questions correctly!");
         Console.WriteLine($"You failed {failed} questions");
+        Console.WriteLine($"Your total score is: {score}/10");
 
         if (passed < 5)
         {
